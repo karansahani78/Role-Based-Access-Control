@@ -34,7 +34,7 @@ Maven: Dependency management.
 
   # Run the Application
   1. ### Clone the repository:
-    git clone <repository_url>
+    git clone https://github.com/karansahani78/Role-Based-Access-Control.git
   
   2. ### Navigate to the project directory
      cd RBAC
