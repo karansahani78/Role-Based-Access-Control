@@ -7,9 +7,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @SpringBootApplication
+@EnableJpaRepositories("com.karan.RBAC.Repository")
 public class RoleBasedAccessControlApplication implements CommandLineRunner {
 	@Autowired
 	private UserRepository userRepository;
@@ -25,9 +27,9 @@ public class RoleBasedAccessControlApplication implements CommandLineRunner {
 		if(null==adminAccount){
 			User user = new User();
 
-			user.setEmail("karanshani723@gmail.com");
-			user.setFirstName("karan");
-			user.setLastName("sahani");
+			user.setEmail("sohanyadav238@gamil.com");
+			user.setFirstName("sohan");
+			user.setLastName("yadav");
 			user.setRole(Role.ADMIN);
 			user.setPassword(new BCryptPasswordEncoder().encode("admin"));
 			userRepository.save(user);
