@@ -11,7 +11,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @SpringBootApplication
-@EnableJpaRepositories("com.karan.RBAC.Repository")
 public class RoleBasedAccessControlApplication implements CommandLineRunner {
 	@Autowired
 	private UserRepository userRepository;
